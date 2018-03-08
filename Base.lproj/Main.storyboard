@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,11 +33,38 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKh-9b-ccM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8y-iF-ubM">
+                                <rect key="frame" x="137.5" y="284.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="R2K-fQ-5SN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7y-CV-5Xc">
+                                <rect key="frame" x="137.5" y="239.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Rel-pq-6m4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i40-0o-0mP">
+                                <rect key="frame" x="163" y="386" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f8y-iF-ubM" firstAttribute="firstBaseline" secondItem="c7y-CV-5Xc" secondAttribute="baseline" constant="45" id="7SF-ul-o0O"/>
                             <constraint firstItem="29N-R5-xIf" firstAttribute="top" secondItem="8JU-vy-Sqk" secondAttribute="bottom" constant="10" id="ElO-hf-gYm"/>
                             <constraint firstItem="29N-R5-xIf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FgT-VN-5Hx"/>
+                            <constraint firstItem="f8y-iF-ubM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nd6-G3-i0a"/>
+                            <constraint firstItem="c7y-CV-5Xc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZn-ik-1Eb"/>
+                            <constraint firstItem="i40-0o-0mP" firstAttribute="firstBaseline" secondItem="29N-R5-xIf" secondAttribute="baseline" constant="11.5" symbolType="layoutAnchor" id="UXc-ra-XfD"/>
+                            <constraint firstItem="8JU-vy-Sqk" firstAttribute="firstBaseline" secondItem="f8y-iF-ubM" secondAttribute="baseline" constant="35" id="bue-QI-Uq0"/>
+                            <constraint firstItem="i40-0o-0mP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d2C-og-uQj"/>
                             <constraint firstItem="8JU-vy-Sqk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dwj-ar-kIj"/>
                             <constraint firstItem="8JU-vy-Sqk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y7Q-D3-z4r"/>
                         </constraints>
@@ -43,6 +72,9 @@
                     </view>
                     <connections>
                         <outlet property="MyLabel" destination="8JU-vy-Sqk" id="wsu-hg-cgv"/>
+                        <outlet property="additionSwitch" destination="i40-0o-0mP" id="iYv-fd-Ryc"/>
+                        <outlet property="bottomTextField" destination="f8y-iF-ubM" id="XgY-xP-bg7"/>
+                        <outlet property="topTextField" destination="c7y-CV-5Xc" id="RmF-lt-8Ub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
